@@ -7,6 +7,10 @@ public class Test2 {
 		System.out.println("Hello, Maria! It worked!");
 		
 		System.out.println("Yay, you is a programmer NOW!!");
+		
+		System.out.println("Cool. We are awesome!");
+		
+		
 	}
 
 }
