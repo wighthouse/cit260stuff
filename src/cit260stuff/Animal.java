@@ -21,8 +21,11 @@ public class Animal {
 	private String notes;
 
 	/** constructors */
-	// no-args
+	// no-args ***We might want to change this to protected***
 	public Animal() {
+		
+		// ***The first one is the default constructor and is empty. If we need to set initial values,
+		//they could go up above where you declared them, but I am not sure we need to.***
 		name = " ";
 		species = " ";
 		breed = " ";
@@ -35,7 +38,7 @@ public class Animal {
 
 	}
 
-	// args
+	// args This looks good!
 	public Animal(String name, String species, String breed, String sex, int ageYears, int ageMonths, String color,
 			String location, String notes) {
 		this.name = name;
@@ -48,7 +51,7 @@ public class Animal {
 		this.location = location;
 		this.notes = notes;
 	}
-
+//***The getters look good - you need to add setters, too.***
 	/** a method to return name */
 	public String getName() {
 		return name;

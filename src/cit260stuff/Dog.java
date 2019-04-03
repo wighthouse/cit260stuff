@@ -22,22 +22,11 @@ public class Dog extends Animal {
 	 * instead of default value it changes to what the other class says- to new
 	 * parameters
 	 */
-	public Dog(boolean getsAlongDogs, boolean getsAlongcats, boolean isGoodWithKids, boolean isPottyTrained,
+
+	public Dog(String name, String species, String breed, String sex, int ageYears, int ageMonths, String color,
+			String location, String notes, boolean getsAlongDogs, boolean getsAlongCats, boolean isGoodWithKids, boolean isPottyTrained,
 			boolean isDogDoorTrained) {
-		// super is the class we are extending in this case Animal
-		super();
-		this.getsAlongDogs = getsAlongDogs;
-		this.getsAlongCats = getsAlongcats;
-		this.isGoodWithKids = isGoodWithKids;
-		this.isPottyTrained = isPottyTrained;
-		this.isDogDoorTrained = isDogDoorTrained;
-
-	}
-
-	public Dog(boolean getsAlongDogs, boolean getsAlongCats, boolean isGoodWithKids, boolean isPottyTrained,
-			boolean isDogDoorTrained, String name, String species, String breed, String sex, int ageYears,
-			int ageMonths, String color, String location, String notes) {
-		// super is the class we are extending in this case Animal
+		// super is the class we are extending in this case Animal 
 		super(name, species, breed, sex, ageYears, ageMonths, color, location, notes);
 		this.getsAlongDogs = getsAlongDogs;
 		this.getsAlongCats = getsAlongCats;
@@ -46,7 +35,7 @@ public class Dog extends Animal {
 		this.isDogDoorTrained = isDogDoorTrained;
 
 	}
-
+//***The getters look good - need to add setters
 	/** a method to return getsAlongDogs*/
 	public boolean getGetsAlongDogs() {
 		return getsAlongDogs;
