@@ -1,3 +1,4 @@
+package cit260stuff;
 import java.util.Scanner;
 
 /**
