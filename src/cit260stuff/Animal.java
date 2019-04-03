@@ -22,10 +22,7 @@ public class Animal {
 
 	/** constructors */
 	// no-args ***We might want to change this to protected***
-	public Animal() {
-		
-		// ***The first one is the default constructor and is empty. If we need to set initial values,
-		//they could go up above where you declared them, but I am not sure we need to.***
+	protected Animal() {
 		name = " ";
 		species = " ";
 		breed = " ";
@@ -51,7 +48,55 @@ public class Animal {
 		this.location = location;
 		this.notes = notes;
 	}
-//***The getters look good - you need to add setters, too.***
+
+	// The setters
+
+	/** a method to set the name */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/** a method to set the species */
+	public void setSpecies(String species) {
+		this.species = species;
+	}
+
+	/** a method to set the breed */
+	public void setBreed(String breed) {
+		this.name = breed;
+	}
+
+	/** a method to set the sex */
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	/** a method to set ageYears */
+	public void setageYears(int ageYears) {
+		this.ageYears = ageYears;
+	}
+
+	/** a method to set ageMonths */
+	public void setageMonths(int ageMonths) {
+		this.ageMonths = ageMonths;
+	}
+
+	/** a method to set the color */
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	/** a method to set the location */
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	/** a method to set the notes */
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+
+//The getters 
 	/** a method to return name */
 	public String getName() {
 		return name;
@@ -96,4 +141,5 @@ public class Animal {
 	public String getNotes() {
 		return notes;
 	}
+	
 }
