@@ -17,6 +17,7 @@ public class Test2 {
 	age= 24;
 	doggie.setageYears(age);
 	System.out.println("The dog's age is:" + doggie.getAgeYears());
+	
 	}
 
 }

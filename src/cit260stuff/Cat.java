@@ -23,6 +23,19 @@ public class Cat extends Animal {
 		this.isLitterBoxTrained = isLitterBoxTrained;
 	}
 
+	// the setters
+
+	/** a method to set isDeclawed */
+	public void setIsDeclawed(boolean isDeclawed) {
+		this.isDeclawed = isDeclawed;
+	}
+
+	/** a method to set isLitterBoxTrained */
+	public void setIsLitterBoxTrained(boolean isLitterBoxTrained) {
+		this.isLitterBoxTrained = isLitterBoxTrained;
+	}
+
+	// the getters
 	/** a method to return isDeclawed */
 	public boolean getIsDeclawed() {
 		return isDeclawed;
