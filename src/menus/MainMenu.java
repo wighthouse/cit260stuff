@@ -37,7 +37,8 @@ public class MainMenu extends Menu {
         return new MenuItem[] {
                 new MenuItem('1', "Add an Animal"),
                 new MenuItem('2', "Remove an Animal"),
-                new MenuItem('3', "Quit"),
+                new MenuItem('3', "Display Current Inventory"),
+                new MenuItem('4', "Quit")
                
         };
     }
@@ -55,15 +56,20 @@ public class MainMenu extends Menu {
         
         switch (Character.toUpperCase(key)) {
             case '1': 
-                System.out.println("You chose: Adopt a Pet");
+                System.out.println("You chose: Add an Animal");
                 Menu addMenu = new AddAnimalMenu();
                 addMenu.display();
                 break;
             case '2':
-                System.out.println("You typed 2");
+                System.out.println("You chose: Remove an Animal");
+               // Menu removeMenu = new RemoveAnimalMenu();//Why doesn't this work??
+               //removeMenu.display();
                 break;
             case '3':
-                System.out.println("You typed 3");
+                System.out.println("You chose: Display Current Inventory");
+                //print inventory list
+                 break;
+            case '4':     
                 return false;
           
                 

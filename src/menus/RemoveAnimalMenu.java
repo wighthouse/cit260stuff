@@ -1,6 +1,6 @@
 package menus;
 
-public class RemoveAnimalMenu {
+public class RemoveAnimalMenu extends Menu{
 
 			//This will display the menu for removing an animal cat/dog
 	
