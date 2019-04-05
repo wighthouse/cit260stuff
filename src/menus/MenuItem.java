@@ -1,4 +1,4 @@
-package cit260stuff;
+package menus;
 
 public class MenuItem {
 

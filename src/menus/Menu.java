@@ -1,4 +1,4 @@
-package cit260stuff;
+package menus;
 import java.util.Scanner;
 
 /**

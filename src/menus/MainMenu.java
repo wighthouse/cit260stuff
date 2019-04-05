@@ -1,4 +1,4 @@
-package cit260stuff;
+package menus;
 
 public class MainMenu extends Menu {
     
@@ -35,8 +35,8 @@ public class MainMenu extends Menu {
     @Override
     protected MenuItem[] getMenuItems() {
         return new MenuItem[] {
-                new MenuItem('1', "Adopt and Animal"),
-                new MenuItem('2', "Surrender an Animal"),
+                new MenuItem('1', "Add an Animal"),
+                new MenuItem('2', "Remove an Animal"),
                 new MenuItem('3', "Quit"),
                
         };
@@ -56,8 +56,8 @@ public class MainMenu extends Menu {
         switch (Character.toUpperCase(key)) {
             case '1': 
                 System.out.println("You chose: Adopt a Pet");
-                Menu adoptMenu = new AdoptMenu();
-                adoptMenu.display();
+                Menu addMenu = new AddAnimalMenu();
+                addMenu.display();
                 break;
             case '2':
                 System.out.println("You typed 2");
