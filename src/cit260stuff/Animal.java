@@ -17,11 +17,8 @@ public class Animal {
 	private int ageYears;
 	private int ageMonths;
 	private String color;
-	private String location;
-	private String notes;
 
 	/** constructors */
-	// no-args ***We might want to change this to protected***
 	protected Animal() {
 		name = " ";
 		species = " ";
@@ -30,14 +27,11 @@ public class Animal {
 		ageYears = 0;
 		ageMonths = 0;
 		color = " ";
-		location = " ";
-		notes = " ";
 
 	}
 
-	// args This looks good!
-	public Animal(String name, String species, String breed, String sex, int ageYears, int ageMonths, String color,
-			String location, String notes) {
+	// args
+	public Animal(String name, String species, String breed, String sex, int ageYears, int ageMonths, String color) {
 		this.name = name;
 		this.species = species;
 		this.breed = breed;
@@ -45,8 +39,6 @@ public class Animal {
 		this.ageYears = ageYears;
 		this.ageMonths = ageMonths;
 		this.color = color;
-		this.location = location;
-		this.notes = notes;
 	}
 
 	// The setters
@@ -86,16 +78,6 @@ public class Animal {
 		this.color = color;
 	}
 
-	/** a method to set the location */
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	/** a method to set the notes */
-	public void setNotes(String notes) {
-		this.notes = notes;
-	}
-
 //The getters 
 	/** a method to return name */
 	public String getName() {
@@ -132,14 +114,4 @@ public class Animal {
 		return color;
 	}
 
-	/** a method to return location */
-	public String getLocation() {
-		return location;
-	}
-
-	/** a method to return notes */
-	public String getNotes() {
-		return notes;
-	}
-	
 }

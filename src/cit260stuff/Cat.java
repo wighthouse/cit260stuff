@@ -16,9 +16,9 @@ public class Cat extends Animal {
 	 * parameters
 	 */
 	public Cat(String name, String species, String breed, String sex, int ageYears, int ageMonths, String color,
-			String location, String notes, boolean isDeclawed, boolean isLitterBoxTrained) {
+			boolean isDeclawed, boolean isLitterBoxTrained) {
 		// super is the class we are extending in this case Animal
-		super(name, species, breed, sex, ageYears, ageMonths, color, location, notes);
+		super(name, species, breed, sex, ageYears, ageMonths, color);
 		this.isDeclawed = isDeclawed;
 		this.isLitterBoxTrained = isLitterBoxTrained;
 	}
