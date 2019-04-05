@@ -10,10 +10,23 @@ import java.io.PrintWriter;
 
 public class ShelterDatabase {
 
-private final String FILENAME = "shelter.txt";
-ArrayList<Animal> inventory = new ArrayList<>();
+private final static String FILENAME = "shelter.txt";
+private static ArrayList<Animal> inventory = null;
     
-    /**
+/**
+ * Return the shelter database array, loading it from a file, if necessary.
+ * @return
+ */
+synchronized public static ArrayList<Animal> getInventory() {
+    
+    if (inventory == null) {
+        loadInventory();
+    }
+    
+    return inventory;
+}   
+
+	 /**
      * Write the inventory of shelter animals out to a file.
      * @param zoo
      */
@@ -122,6 +135,34 @@ ArrayList<Animal> inventory = new ArrayList<>();
         }
         return null;
        // return new Dog(name, breed, sex); This will be generated as input in AddAnimal Menu 
+        
+    }
+private Dog readCat(Scanner scanner) {
+        
+        String name = null;
+        String breed = null;
+        String sex = null;
+        
+        for (int i=0; i < 3; i++) {
+            
+            String key = scanner.next();
+            
+            if (key.equals("Name")) {
+                name = scanner.next();
+                
+            } else if (key.equals("Breed")) {
+                breed = scanner.next().trim();
+            
+            } else if (key.equals("Sex")) {
+                sex = scanner.next().trim();
+            }
+        }
+        
+        if (name == null || breed == null || sex == null) {
+            return null;
+        }
+        return null;
+       // return new Cat(name, breed, sex); This will be generated as input in AddAnimal Menu 
         
     }
 }
