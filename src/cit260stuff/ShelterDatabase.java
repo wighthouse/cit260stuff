@@ -30,7 +30,7 @@ synchronized public static ArrayList<Animal> getInventory() {
      * Write the inventory of shelter animals out to a file.
      * @param zoo
      */
-    public void storeInventory(ArrayList<Animal> inventory) {
+    public static void storeInventory(ArrayList<Animal> inventory) {
         
         File textFile = new File(FILENAME);
         
@@ -64,7 +64,7 @@ synchronized public static ArrayList<Animal> getInventory() {
      * Load the shelter inventory file.
      * @return
      */
-    public ArrayList<Animal> loadInventory() {
+    public static ArrayList<Animal> loadInventory() {
         
         File textFile = new File(FILENAME);
         ArrayList<Animal> inventory = new ArrayList<>();
@@ -85,9 +85,9 @@ synchronized public static ArrayList<Animal> getInventory() {
                         case "Dog":
                             animal = readDog(scanner);
                             break;
-                       // case "Cat":
-                            //animal = readCat(scanner);
-                          //  break; ***Need to add
+                        case "Cat":
+                            animal = readCat(scanner);
+                            break; 
                         default:
                             break;
                     }
@@ -109,7 +109,7 @@ synchronized public static ArrayList<Animal> getInventory() {
      * @param scanner
      * @return
      */
-    private Dog readDog(Scanner scanner) {
+    private static Dog readDog(Scanner scanner) {
         
         String name = null;
         String breed = null;
@@ -137,7 +137,7 @@ synchronized public static ArrayList<Animal> getInventory() {
        // return new Dog(name, breed, sex); This will be generated as input in AddAnimal Menu 
         
     }
-private Dog readCat(Scanner scanner) {
+private static Cat readCat(Scanner scanner) {
         
         String name = null;
         String breed = null;
