@@ -6,7 +6,7 @@ public class Test2 {
 				
 	
 	//hard-coded values to test since we don't have user input yet-getters
-	Dog doggie= new Dog("fluffy", "dog", "chihuahua", "female", 5, 3, "black", "downtown", "none", true, true, true,true, true);
+	Dog doggie= new Dog("fluffy", "dog", "chihuahua", "female", 5, 3, "black", true, true);
 	System.out.println("The dog's age is:" + doggie.getAgeYears());
 	System.out.println("The dog's color is:" + doggie.getColor());
 
