@@ -108,6 +108,14 @@ public class AddAnimalMenu extends Menu {
         String sex = prompt(promptMessage);
         animal.setBreed(sex);
     	}
+    private void getAnimalSex(Animal animal) {
+        String promptMessage = String.format(
+            "Please enter the %s's sex: ", 
+            animal.getClass().getSimpleName());
+
+        String sex = prompt(promptMessage);
+        animal.setBreed(sex);
+    	}
     /**
      * Prompt the user for the new Dog's attributes and
      * add it to the ShelterDatabase.
