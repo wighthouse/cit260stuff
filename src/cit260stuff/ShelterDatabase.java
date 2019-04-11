@@ -96,7 +96,7 @@ public class ShelterDatabase {
 				String key = scanner.next();
 				String value = scanner.next().trim();
 
-				//Animal animal = null;
+				// Animal animal = null;
 
 				if (key.equals("Type")) {
 
@@ -131,16 +131,11 @@ public class ShelterDatabase {
 	 */
 	private static void readAnimalStuff(Animal animal, Scanner scanner) {
 
-		/*String name = null;
-		String species = null;
-		String breed = null;
-		String sex = null;
-		Integer ageYears = 0;
-		Integer ageMonths = 0;
-		String color = null;
-		boolean getsAlongDogs = false;
-		boolean isPottyTrained = false;
-*/
+		/*
+		 * String name = null; String species = null; String breed = null; String sex =
+		 * null; Integer ageYears = 0; Integer ageMonths = 0; String color = null;
+		 * boolean getsAlongDogs = false; boolean isPottyTrained = false;
+		 */
 		for (int i = 0; i < 7; i++) {
 
 			String key = scanner.next();
