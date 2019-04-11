@@ -146,7 +146,7 @@ public class AddAnimalMenu extends Menu {
         newDog.setGetsAlongDogs(getsAlongDogs);
 
         ShelterDatabase.getInventory().add(newDog);
-        ShelterDatabase.storeInventory();
+       // ShelterDatabase.storeInventory();
     }
 
     /**
@@ -167,7 +167,7 @@ public class AddAnimalMenu extends Menu {
         newCat.setIsDeclawed(isDeclawed);
 
         ShelterDatabase.getInventory().add(newCat);
-        ShelterDatabase.storeInventory();
+      //  ShelterDatabase.storeInventory();
     }
     
 }
