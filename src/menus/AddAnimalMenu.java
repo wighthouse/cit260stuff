@@ -57,10 +57,11 @@ public class AddAnimalMenu extends Menu {
         switch (Character.toUpperCase(key)) {
             case '1': 
             	animal = new Dog();
-            	
+            	addDog();
                 break;
             case '2':
             	animal = new Cat();
+            	addCat();
                 break;
             case 'R':
                 return false;
@@ -77,7 +78,7 @@ public class AddAnimalMenu extends Menu {
      * Prompt for the animal's attributes. These are common to all animals
      * so we only need the base class referenced here.
      */
-    private void getAnimalSuff(Animal animal) {
+    private void getAnimalStuff(Animal animal) {
         String promptMessage = String.format(
             "Please enter the %s's name: ", 
             animal.getClass().getSimpleName());
@@ -136,7 +137,8 @@ public class AddAnimalMenu extends Menu {
 
         Dog newDog = new Dog();
 
-        //animal = getAnimalStuff(newDog);
+        getAnimalStuff(newDog);
+    	
 
         String promptMessage = String.format(
             "Does the %s get along with other dogs? (True or False): ",
@@ -157,7 +159,9 @@ public class AddAnimalMenu extends Menu {
     private void addCat() {
     	Cat newCat = new Cat();
 
-       // getAnimalName(newCat);
+        getAnimalageYears(newCat);
+        getAnimalSex(newCat);
+        
 
         String promptMessage = String.format(
             "Is the %s declawed? (True or False): ",
