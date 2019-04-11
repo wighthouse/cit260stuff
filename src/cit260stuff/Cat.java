@@ -45,21 +45,25 @@ public class Cat extends Animal {
 	public boolean getIsLitterBoxTrained() {
 		return isLitterBoxTrained;
 	}
-	 /**
-     * Return a printable description of the Dog
-     * @return
-     */
-    @Override
-    public String getDescription() {
-        return String.format("name %s is a %s, Breed: %s, Sex: %s, %s of age, Color: %s", getName(), getSpecies(), getBreed(), getSex(), getAgeYears(), getColor());
-    }
 
-    /**
-     * toString() override.
-     */
-    @Override
-    public String toString() {
-        return String.format("Cat { %s, Is litter box trained? %s. Is declawed? %s. }", super.toString(), isLitterBoxTrained, isDeclawed);
-    }
+	/**
+	 * Return a printable description of the Dog
+	 * 
+	 * @return
+	 */
+	@Override
+	public String getDescription() {
+		return String.format("name %s is a %s, Breed: %s, Sex: %s, %s of age, Color: %s", getName(), getSpecies(),
+				getBreed(), getSex(), getAgeYears(), getColor());
+	}
+
+	/**
+	 * toString() override.
+	 */
+	@Override
+	public String toString() {
+		return String.format("Cat { %s, Is litter box trained? %s. Is declawed? %s. }", super.toString(),
+				isLitterBoxTrained, isDeclawed);
+	}
 
 }

@@ -9,14 +9,13 @@ public class ShelterInventoryMain {
 
 		// create the MainMenu object
 		Menu mainMenu = new MainMenu();
-		
+
 		// display it (when it returns, the program will end.)
 		mainMenu.display();
-		
+
 		// Say thank you, and exit
 		System.out.println();
-        System.out.println("Thank you!");
+		System.out.println("Thank you!");
 	}
-
 
 }

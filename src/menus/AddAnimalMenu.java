@@ -89,25 +89,24 @@ public class AddAnimalMenu extends Menu {
 
 		String breed = prompt(promptMessage);
 		animal.setBreed(breed);
-	
+
 		promptMessage = String.format("Please enter the %s's sex: ", animal.getClass().getSimpleName());
 
 		String sex = prompt(promptMessage);
 		animal.setSex(sex);
-	
+
 		promptMessage = String.format("Please enter the %s's color: ", animal.getClass().getSimpleName());
 
 		String color = prompt(promptMessage);
 		animal.setColor(color);
-	
+
 		promptMessage = String.format("Please enter the %s's age in years: ", animal.getClass().getSimpleName());
 
 		String ageYrs = prompt(promptMessage);
 		Integer ageYears = Integer.parseInt("ageYrs");
 		animal.setageYears(ageYears);
-	
-		promptMessage = String.format("Please enter the %s's age in months: ",
-				animal.getClass().getSimpleName());
+
+		promptMessage = String.format("Please enter the %s's age in months: ", animal.getClass().getSimpleName());
 
 		String ageMnth = prompt(promptMessage);
 		Integer ageMonths = Integer.parseInt("ageMnth");

@@ -114,21 +114,19 @@ public class Animal {
 		return color;
 	}
 
-    /**
-     * Return a printable description of the animal.
-     */
-    public String getDescription() {
-    	return null;
-    }
+	/**
+	 * Return a printable description of the animal.
+	 */
+	public String getDescription() {
+		return null;
+	}
 
-
-    /**
-     * Describe the Animal object.
-     */
-    @Override
-    public String toString() {
-        return String.format("Animal { name: %s }", name);
-    }
-
+	/**
+	 * Describe the Animal object.
+	 */
+	@Override
+	public String toString() {
+		return String.format("Animal { name: %s }", name);
+	}
 
 }
