@@ -53,13 +53,14 @@ public class AddAnimalMenu extends Menu {
      */
     @Override
     protected boolean handleMenuSelection(char key) {
-        
+        Animal animal= null;
         switch (Character.toUpperCase(key)) {
             case '1': 
-                addDog();
+            	animal = new Dog();
+            	
                 break;
             case '2':
-                addCat();
+            	animal = new Cat();
                 break;
             case 'R':
                 return false;
@@ -76,16 +77,16 @@ public class AddAnimalMenu extends Menu {
      * Prompt for the animal's attributes. These are common to all animals
      * so we only need the base class referenced here.
      */
-    private void getAnimalName(Animal animal) {
+    private void getAnimalSuff(Animal animal) {
         String promptMessage = String.format(
             "Please enter the %s's name: ", 
             animal.getClass().getSimpleName());
 
         String name = prompt(promptMessage);
         animal.setName(name);
-    	}
-    private void getAnimalBreed(Animal animal) {
-        String promptMessage = String.format(
+    	
+    
+        promptMessage = String.format(
             "Please enter the %s's breed: ", 
             animal.getClass().getSimpleName());
 
@@ -135,7 +136,7 @@ public class AddAnimalMenu extends Menu {
 
         Dog newDog = new Dog();
 
-        getAnimalName(newDog);
+        //animal = getAnimalStuff(newDog);
 
         String promptMessage = String.format(
             "Does the %s get along with other dogs? (True or False): ",
@@ -146,7 +147,7 @@ public class AddAnimalMenu extends Menu {
         newDog.setGetsAlongDogs(getsAlongDogs);
 
         ShelterDatabase.getInventory().add(newDog);
-       // ShelterDatabase.storeInventory();
+        ShelterDatabase.storeInventory();
     }
 
     /**
@@ -156,7 +157,7 @@ public class AddAnimalMenu extends Menu {
     private void addCat() {
     	Cat newCat = new Cat();
 
-        getAnimalName(newCat);
+       // getAnimalName(newCat);
 
         String promptMessage = String.format(
             "Is the %s declawed? (True or False): ",
@@ -167,7 +168,7 @@ public class AddAnimalMenu extends Menu {
         newCat.setIsDeclawed(isDeclawed);
 
         ShelterDatabase.getInventory().add(newCat);
-      //  ShelterDatabase.storeInventory();
+        ShelterDatabase.storeInventory();
     }
     
 }
