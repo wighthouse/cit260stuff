@@ -98,24 +98,35 @@ public class AddAnimalMenu extends Menu {
             animal.getClass().getSimpleName());
 
         String sex = prompt(promptMessage);
-        animal.setBreed(sex);
+        animal.setSex(sex);
     	}
-    private void getAnimalSex(Animal animal) {
+    private void getAnimalColor(Animal animal) {
         String promptMessage = String.format(
-            "Please enter the %s's sex: ", 
+            "Please enter the %s's color: ", 
             animal.getClass().getSimpleName());
 
-        String sex = prompt(promptMessage);
-        animal.setBreed(sex);
+        String color = prompt(promptMessage);
+        animal.setColor(color);
     	}
-    private void getAnimalSex(Animal animal) {
+    private void getAnimalageYears(Animal animal) {
         String promptMessage = String.format(
-            "Please enter the %s's sex: ", 
+            "Please enter the %s's age in years: ", 
             animal.getClass().getSimpleName());
 
-        String sex = prompt(promptMessage);
-        animal.setBreed(sex);
+        String ageYrs = prompt(promptMessage);
+        Integer ageYears = Integer.parseInt("ageYrs");
+        animal.setageYears(ageYears);
     	}
+    private void getAnimalageMonth(Animal animal) {
+        String promptMessage = String.format(
+            "Please enter the %s's age in months: ", 
+            animal.getClass().getSimpleName());
+
+        String ageMnth = prompt(promptMessage);
+        Integer ageMonths = Integer.parseInt("ageMnth");
+        animal.setageMonths(ageMonths);
+    	}
+    
     /**
      * Prompt the user for the new Dog's attributes and
      * add it to the ShelterDatabase.
@@ -127,15 +138,15 @@ public class AddAnimalMenu extends Menu {
         getAnimalName(newDog);
 
         String promptMessage = String.format(
-            "Please enter the %s's favorite toy: ",
+            "Does the %s get along with other dogs? (True or False): ",
             Dog.class.getSimpleName());
 
-        String toy = prompt(promptMessage);
+        String getsAlong = prompt(promptMessage);
+        boolean getsAlongDogs = Boolean.valueOf(getsAlong);
+        newDog.setGetsAlongDogs(getsAlongDogs);
 
-        newDog.setFavoriteToy(toy);
-
-        ZooDatabase.getZoo().add(newDog);
-        ZooDatabase.storeZoo();
+        ShelterDatabase.getInventory().add(newDog);
+        ShelterDatabase.storeInventory();
     }
 
     /**
@@ -143,9 +154,20 @@ public class AddAnimalMenu extends Menu {
      * add it to the ShelterDatabase.
      */
     private void addCat() {
-        getAnimalName(animal);
-        ZooDatabase.getZoo().add(animal);
-        ZooDatabase.storeZoo();
+    	Cat newCat = new Cat();
+
+        getAnimalName(newCat);
+
+        String promptMessage = String.format(
+            "Is the %s declawed? (True or False): ",
+            Cat.class.getSimpleName());
+
+        String claws = prompt(promptMessage);
+        boolean isDeclawed = Boolean.valueOf(claws);
+        newCat.setIsDeclawed(isDeclawed);
+
+        ShelterDatabase.getInventory().add(newCat);
+        ShelterDatabase.storeInventory();
     }
     
 }

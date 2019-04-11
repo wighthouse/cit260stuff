@@ -28,7 +28,7 @@ synchronized public static ArrayList<Animal> getInventory() {
 
 	 /**
      * Write the inventory of shelter animals out to a file.
-     * @param zoo
+     * @param inventory
      */
     public static void storeInventory(ArrayList<Animal> inventory) {
         
@@ -39,6 +39,11 @@ synchronized public static ArrayList<Animal> getInventory() {
             
             for (Animal animal : inventory) {
                 out.printf("Type: %s%n", animal.getClass().getSimpleName());
+                out.printf("Breed: %s%n", animal.getBreed());
+                out.printf("Sex: %s%n", animal.getSex());
+                out.printf("Color: %s%n", animal.getColor());
+                out.printf("AgeInYears: %s%n", animal.getAgeYears());
+                out.printf("AgeInMonths: %s%n", animal.getAgeMonths());
                 
                 if (animal instanceof Cat) {
                     Cat cat = (Cat)animal;
