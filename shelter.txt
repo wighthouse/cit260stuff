@@ -1,0 +1,18 @@
+Type: Dog
+Name: coco
+Breed: chih
+Sex: m
+Color: wh
+AgeInYears: 9
+AgeInMonths: 7
+Gets Along with Dogs: false
+IsPottyTrained: true
+Type: Cat
+Name: nono
+Breed: unknwn
+Sex: f
+Color: bl
+AgeInYears: 2
+AgeInMonths: 0
+Litterbox Trained: true
+IsDeclawed: false

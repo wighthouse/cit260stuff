@@ -45,7 +45,6 @@ public class Animal {
 		this.name = name;
 	}
 
-	
 	/** a method to set the breed */
 	public void setBreed(String breed) {
 		this.breed = breed;
@@ -77,7 +76,6 @@ public class Animal {
 		return name;
 	}
 
-	
 	/** a method to return breed */
 	public String getBreed() {
 		return breed;

@@ -19,8 +19,8 @@ public class Dog extends Animal {
 	 * parameters
 	 */
 
-	public Dog(String name, String breed, String sex, int ageYears, int ageMonths, String color,
-			boolean getsAlongDogs, boolean isPottyTrained) {
+	public Dog(String name, String breed, String sex, int ageYears, int ageMonths, String color, boolean getsAlongDogs,
+			boolean isPottyTrained) {
 		// super is the class we are extending in this case Animal
 		super(name, breed, sex, ageYears, ageMonths, color);
 		this.getsAlongDogs = getsAlongDogs;
@@ -57,8 +57,8 @@ public class Dog extends Animal {
 	 */
 	@Override
 	public String getDescription() {
-		return String.format("Name: %s, Breed: %s, Sex: %s, %s of age, Color: %s", getName(),
-				getBreed(), getSex(), getAgeYears(), getColor());
+		return String.format("Name: %s, Breed: %s, Sex: %s, %s of age, Color: %s", getName(), getBreed(), getSex(),
+				getAgeYears(), getColor());
 	}
 
 	/**

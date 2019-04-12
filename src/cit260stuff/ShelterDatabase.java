@@ -120,7 +120,6 @@ public class ShelterDatabase {
 
 		}
 
-	
 	}
 
 	/**
@@ -177,8 +176,10 @@ public class ShelterDatabase {
 				isPottyTrained = Boolean.valueOf(pottyTrained);
 
 			}
-		}return null;
-		//return new Dog(name, breed, sex, ageYears, ageMonths, color, getsAlongDogs, isPottyTrained);
+		}
+		return null;
+		// return new Dog(name, breed, sex, ageYears, ageMonths, color, getsAlongDogs,
+		// isPottyTrained);
 	}
 
 	private static Cat readCat(Scanner scanner) {

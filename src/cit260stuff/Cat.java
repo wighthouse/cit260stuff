@@ -15,8 +15,8 @@ public class Cat extends Animal {
 	 * instead of default value it changes to what the other class says- to new
 	 * parameters
 	 */
-	public Cat(String name, String breed, String sex, int ageYears, int ageMonths, String color,
-			boolean isDeclawed, boolean isLitterBoxTrained) {
+	public Cat(String name, String breed, String sex, int ageYears, int ageMonths, String color, boolean isDeclawed,
+			boolean isLitterBoxTrained) {
 		// super is the class we are extending in this case Animal
 		super(name, breed, sex, ageYears, ageMonths, color);
 		this.isDeclawed = isDeclawed;
@@ -53,8 +53,8 @@ public class Cat extends Animal {
 	 */
 	@Override
 	public String getDescription() {
-		return String.format("Name: %s Breed: %s, Sex: %s, %s of age, Color: %s", getName(),
-				getBreed(), getSex(), getAgeYears(), getColor());
+		return String.format("Name: %s Breed: %s, Sex: %s, %s of age, Color: %s", getName(), getBreed(), getSex(),
+				getAgeYears(), getColor());
 	}
 
 	/**
