@@ -59,12 +59,11 @@ public class MainMenu extends Menu {
 			break;
 		case '2':
 			System.out.println("You chose: Remove an Animal");
-			// Menu removeMenu = new RemoveAnimalMenu();//Why doesn't this work??
-			// removeMenu.display();
+			new RemoveAnimalMenu().display();
 			break;
 		case '3':
 			System.out.println("You chose: Display Current Inventory");
-			// print inventory list
+			new PrintAnimalsMenu().display();
 			break;
 		case '4':
 			return false;

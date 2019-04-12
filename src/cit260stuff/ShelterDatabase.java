@@ -14,7 +14,6 @@ public class ShelterDatabase {
 	private static ArrayList<Animal> inventory = null;
 	private static Animal animal = null;
 	private static String name = null;
-	private static String species = null;
 	private static String breed = null;
 	private static String sex = null;
 	private static Integer ageYears = 0;
@@ -83,10 +82,10 @@ public class ShelterDatabase {
 	 * 
 	 * @return
 	 */
-	public static ArrayList<Animal> loadInventory() {
+	public static void loadInventory() {
 
 		File textFile = new File(FILENAME);
-		ArrayList<Animal> inventory = new ArrayList<>();
+		inventory = new ArrayList<Animal>();
 
 		try (Scanner scanner = new Scanner(textFile)) {
 
@@ -117,11 +116,11 @@ public class ShelterDatabase {
 				}
 			}
 		} catch (FileNotFoundException exception) {
-			System.err.println("Could not find file path. Seriously!");
+			System.err.println("Could not find the inventory file. Creating one now.");
 
 		}
 
-		return inventory;
+	
 	}
 
 	/**
@@ -148,9 +147,6 @@ public class ShelterDatabase {
 
 			} else if (key.equals("Sex")) {
 				sex = scanner.next().trim();
-
-			} else if (key.equals("Species")) {
-				species = scanner.next().trim();
 
 			} else if (key.equals("Color")) {
 				color = scanner.next().trim();
@@ -181,8 +177,8 @@ public class ShelterDatabase {
 				isPottyTrained = Boolean.valueOf(pottyTrained);
 
 			}
-		}
-		return new Dog(name, species, breed, sex, ageYears, ageMonths, color, getsAlongDogs, isPottyTrained);
+		}return null;
+		//return new Dog(name, breed, sex, ageYears, ageMonths, color, getsAlongDogs, isPottyTrained);
 	}
 
 	private static Cat readCat(Scanner scanner) {

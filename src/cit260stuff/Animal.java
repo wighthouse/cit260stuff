@@ -11,7 +11,6 @@ package cit260stuff;
 public class Animal {
 	/** default values or data field-declare */
 	private String name;
-	private String species;
 	private String breed;
 	private String sex;
 	private int ageYears;
@@ -21,7 +20,6 @@ public class Animal {
 	/** constructors */
 	protected Animal() {
 		name = " ";
-		species = " ";
 		breed = " ";
 		sex = " ";
 		ageYears = 0;
@@ -31,9 +29,8 @@ public class Animal {
 	}
 
 	// args
-	public Animal(String name, String species, String breed, String sex, int ageYears, int ageMonths, String color) {
+	public Animal(String name, String breed, String sex, int ageYears, int ageMonths, String color) {
 		this.name = name;
-		this.species = species;
 		this.breed = breed;
 		this.sex = sex;
 		this.ageYears = ageYears;
@@ -48,14 +45,10 @@ public class Animal {
 		this.name = name;
 	}
 
-	/** a method to set the species */
-	public void setSpecies(String species) {
-		this.species = species;
-	}
-
+	
 	/** a method to set the breed */
 	public void setBreed(String breed) {
-		this.name = breed;
+		this.breed = breed;
 	}
 
 	/** a method to set the sex */
@@ -84,11 +77,7 @@ public class Animal {
 		return name;
 	}
 
-	/** a method to return species */
-	public String getSpecies() {
-		return species;
-	}
-
+	
 	/** a method to return breed */
 	public String getBreed() {
 		return breed;
