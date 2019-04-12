@@ -72,7 +72,7 @@ public class ShelterDatabase {
 			}
 
 		} catch (FileNotFoundException exception) {
-			System.err.println("Could not find file path");
+			System.err.println("Could not find file path, we've looked all day.");
 
 		}
 
@@ -117,7 +117,7 @@ public class ShelterDatabase {
 				}
 			}
 		} catch (FileNotFoundException exception) {
-			System.err.println("Could not find file path");
+			System.err.println("Could not find file path. Seriously!");
 
 		}
 

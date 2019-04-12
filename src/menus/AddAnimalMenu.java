@@ -103,13 +103,13 @@ public class AddAnimalMenu extends Menu {
 		promptMessage = String.format("Please enter the %s's age in years: ", animal.getClass().getSimpleName());
 
 		String ageYrs = prompt(promptMessage);
-		Integer ageYears = Integer.parseInt("ageYrs");
+		int ageYears = Integer.parseInt(ageYrs);
 		animal.setageYears(ageYears);
 
 		promptMessage = String.format("Please enter the %s's age in months: ", animal.getClass().getSimpleName());
 
 		String ageMnth = prompt(promptMessage);
-		Integer ageMonths = Integer.parseInt("ageMnth");
+		int ageMonths = Integer.parseInt(ageMnth);
 		animal.setageMonths(ageMonths);
 	}
 
